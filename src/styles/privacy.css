@@ -8,14 +8,6 @@
   padding: 26px 0 0;
 }
 
-.privacy-page__breadcrumbs {
-  margin: 0 0 28px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-  color: #7f8a9c;
-  font-size: 12px;
-}
-
 .privacy-page__title {
   margin: 0 0 24px;
   font-size: 28px;

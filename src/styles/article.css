@@ -8,12 +8,6 @@
   padding: 26px 0 0;
 }
 
-.article-page__breadcrumbs {
-  margin: 0 0 10px;
-  color: #7f8a9c;
-  font-size: 12px;
-}
-
 .article-page__back {
   display: inline-flex;
   margin-bottom: 26px;

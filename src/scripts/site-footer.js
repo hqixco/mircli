@@ -1,8 +1,11 @@
+import footerLogo from '../images/logo.svg';
+import footerDevIcon from '../images/slay-x0020-1.png';
+
 const FOOTER_HTML = `
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__logo">
-        <img class="site-footer__logo-mark" src="/src/images/logo.svg" alt="MiCi" />
+        <img class="site-footer__logo-mark" src="${footerLogo}" alt="MiCi" />
       </div>
 
       <div class="site-footer__block site-footer__block--contacts">
@@ -39,7 +42,7 @@ const FOOTER_HTML = `
       <a href="#">Политика пользовательского соглашения</a>
       <a class="site-footer__dev" href="#" aria-label="Разработка">
         <span>Разработал</span>
-        <img src="/src/images/slay-x0020-1.png" alt="" aria-hidden="true" />
+        <img src="${footerDevIcon}" alt="" aria-hidden="true" />
       </a>
     </div>
   </div>
