@@ -1,0 +1,49 @@
+@import './home.css';
+
+.page--privacy main {
+  display: block;
+}
+
+.privacy-page {
+  padding: 26px 0 0;
+}
+
+.privacy-page__breadcrumbs {
+  margin: 0 0 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: #7f8a9c;
+  font-size: 12px;
+}
+
+.privacy-page__title {
+  margin: 0 0 24px;
+  font-size: 28px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.privacy-content {
+  max-width: 1420px;
+  font-size: 18px;
+  line-height: 1.32;
+  color: #202020;
+}
+
+.privacy-content p {
+  margin: 0 0 22px;
+}
+
+@media (max-width: 720px) {
+  .privacy-page {
+    padding-top: 18px;
+  }
+
+  .privacy-page__title {
+    font-size: 24px;
+  }
+
+  .privacy-content {
+    font-size: 15px;
+  }
+}

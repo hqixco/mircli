@@ -1,0 +1,131 @@
+@import './home.css';
+
+.page--blog main {
+  display: block;
+}
+
+.blog-page {
+  padding: 26px 0 0;
+}
+
+.blog-page__breadcrumbs {
+  margin: 0 0 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: #7f8a9c;
+  font-size: 12px;
+}
+
+.blog-page__title {
+  margin: 0 0 26px;
+  font-size: 28px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid #d7d7d7;
+  border-bottom: 0;
+}
+
+.blog-card {
+  min-height: 387px;
+  border-right: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  background: #fff;
+}
+
+.blog-card:nth-child(4n) {
+  border-right: 0;
+}
+
+.blog-card img {
+  width: calc(100% - 56px);
+  margin: 28px auto 14px;
+  display: block;
+  object-fit: cover;
+}
+
+.blog-card__body {
+  padding: 0 16px 16px;
+}
+
+.blog-card__body h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.blog-card__body p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #3d4450;
+}
+
+.blog-card__body a {
+  display: inline-flex;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid #111;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-page__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0 0;
+  color: #bcbcbc;
+  font-size: 13px;
+}
+
+.blog-page__pagination .is-current {
+  color: #111;
+}
+
+.blog-page__arrow {
+  color: #111;
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media (max-width: 1180px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-card:nth-child(4n) {
+    border-right: 1px solid #d7d7d7;
+  }
+
+  .blog-card:nth-child(2n) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .blog-page {
+    padding-top: 18px;
+  }
+
+  .blog-page__title {
+    font-size: 24px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card,
+  .blog-card:nth-child(2n),
+  .blog-card:nth-child(4n) {
+    border-right: 0;
+  }
+}

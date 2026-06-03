@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <meta name="description" content="Каталог товаров" />
+    <link rel="stylesheet" href="/src/styles/catalog.css" />
+  </head>
+  <body class="page page--catalog" data-header-active="catalog">
+    <header class="site-header" data-site-header></header>
+
+    <main class="catalog">
+      <div class="container">
+        <p class="catalog__breadcrumbs">Главная - Каталог</p>
+        <h1 class="catalog__title">Каталог</h1>
+
+        <div class="catalog__layout">
+          <aside class="catalog-filters" aria-label="Фильтры">
+            <h2 class="catalog-filters__title">Фильтры</h2>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Мощность</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> 20 м² - 2 кВт</label>
+                <label><input type="checkbox" /> 20 м² - 2 кВт</label>
+                <label><input type="checkbox" /> 20 м² - 2 кВт</label>
+                <label><input type="checkbox" /> 20 м² - 2 кВт</label>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Цена</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+              <div class="catalog-filter__body">
+                <div class="catalog-filter__range">
+                  <input type="text" value="0" />
+                  <span>—</span>
+                  <input type="text" value="321 456" />
+                  <span>руб.</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Производители</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Компрессор</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> Инвертор</label>
+                <label><input type="checkbox" /> Не инвертор</label>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Технологии</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> Антиаллергенный фильтр</label>
+                <label><input type="checkbox" /> Антибактериальный фильтр</label>
+                <label><input type="checkbox" /> Фильтр тонкой очистки</label>
+                <label><input type="checkbox" /> Предварительный фильтр</label>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Подмес свежего воздуха</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> Авто режим</label>
+                <label><input type="checkbox" /> Авторестарт</label>
+                <label><input type="checkbox" /> Дисплей</label>
+                <label><input type="checkbox" /> Самоочистка</label>
+              </div>
+            </section>
+
+            <section class="catalog-filter">
+              <div class="catalog-filter__head">
+                <span>Тип хладагента</span>
+                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+              </div>
+            </section>
+
+            <div class="catalog-filter__actions">
+              <button type="button" class="button button--dark">применить</button>
+              <a class="catalog-filter__reset" href="#">сбросить</a>
+            </div>
+          </aside>
+
+          <section class="catalog-products" aria-label="Товары каталога">
+            <div class="catalog-products__grid">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+                  <div class="product-card__icons" aria-hidden="true"><img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" /><img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" /></div>
+                </div>
+                <div class="product-card__body">
+                  <p class="product-card__kicker">Настенный кондиционер</p>
+                  <h3>Vickers Smart VCH-07HE</h3>
+                  <dl>
+                    <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                    <div><dt>Площадь, м²</dt><dd>20</dd></div>
+                    <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
+                  </dl>
+                  <div class="product-card__footer">
+                    <strong>14 тыс ₽</strong>
+                    <div class="product-card__buttons">
+                      <a href="#">подробнее</a>
+                      <a class="is-dark" href="#">добавить в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <nav class="catalog-products__pagination" aria-label="Пагинация">
+              <span class="arrow">‹</span>
+              <a class="is-current" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <span>...</span>
+              <a href="#">6</a>
+              <span class="arrow">›</span>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <div class="site-footer__logo">
+            <span class="site-footer__logo-mark" aria-hidden="true"></span>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Телефон</h3>
+            <a href="tel:+79999999999">+7 999 999 99 99</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Почта</h3>
+            <a href="mailto:info@mircl.ru">info@mircl.ru</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Каталог</h3>
+            <a href="/src/pages/catalog.html">сплит-системы</a>
+            <a href="/src/pages/catalog.html">доп. оборудование</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Меню</h3>
+            <a href="/src/pages/about.html">о компании</a>
+            <a href="/src/pages/contacts.html">контакты</a>
+            <a href="/src/pages/blog.html">блог</a>
+            <a href="/src/pages/promotions.html">акции</a>
+            <a href="/src/pages/service.html">установка и обслуживание</a>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <span>© 2025</span>
+          <a href="/src/pages/privacy.html">Политика конфиденциальности</a>
+          <a href="#">Политика оферты</a>
+          <a href="#">Политика пользовательского соглашения</a>
+          <a class="site-footer__dev" href="#" aria-label="Разработка">
+            <span>Разработал</span>
+            <img src="/src/images/developed-icon.svg" alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/scripts/product-card-icons.js"></script>
+    <script type="module" src="/src/scripts/site-header.js"></script>
+  </body>
+</html>

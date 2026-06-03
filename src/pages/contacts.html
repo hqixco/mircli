@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <meta name="description" content="Контакты" />
+    <link rel="stylesheet" href="/src/styles/contacts.css" />
+  </head>
+  <body class="page page--contacts" data-header-active="contacts">
+    <header class="site-header" data-site-header></header>
+
+    <main class="contacts-page">
+      <div class="container">
+        <p class="contacts-page__breadcrumbs">Главная - Контакты</p>
+
+        <section class="contacts-hero">
+          <div class="contacts-hero__content">
+            <h1>Контакты</h1>
+
+            <div class="contacts-hero__items">
+              <div>
+                <span>адрес</span>
+                <p>ул. Пушкина, д. 42, кв. 15, г. Москва, Россия, 123456</p>
+              </div>
+              <div>
+                <span>телефон</span>
+                <p>+7 999 999 99 99</p>
+              </div>
+              <div>
+                <span>почта</span>
+                <p>info@mircl.ru</p>
+              </div>
+              <div>
+                <span>часы работы</span>
+                <div class="contacts-hero__hours">
+                  <p><b>пн-пт</b> 09:00 - 20:00</p>
+                  <p><b>сб-вс</b> 10:00 - 18:00</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="button button--dark contacts-hero__button" href="#">связаться с нами</a>
+          </div>
+
+          <div class="contacts-hero__map" aria-label="Карта Москвы">
+            <img src="/src/images/contact-map.svg" alt="" aria-hidden="true" />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <div class="site-footer__logo">
+            <span class="site-footer__logo-mark" aria-hidden="true"></span>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Телефон</h3>
+            <a href="tel:+79999999999">+7 999 999 99 99</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Почта</h3>
+            <a href="mailto:info@mircl.ru">info@mircl.ru</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Каталог</h3>
+            <a href="/src/pages/catalog.html">сплит-системы</a>
+            <a href="/src/pages/catalog.html">доп. оборудование</a>
+          </div>
+
+          <div class="site-footer__block">
+            <h3>Меню</h3>
+            <a href="/src/pages/about.html">о компании</a>
+            <a href="/src/pages/contacts.html">контакты</a>
+            <a href="/src/pages/blog.html">блог</a>
+            <a href="/src/pages/promotions.html">акции</a>
+            <a href="/src/pages/service.html">установка и обслуживание</a>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <span>© 2025</span>
+          <a href="/src/pages/privacy.html">Политика конфиденциальности</a>
+          <a href="#">Политика оферты</a>
+          <a href="#">Политика пользовательского соглашения</a>
+          <a class="site-footer__dev" href="#" aria-label="Разработка">
+            <span>Разработан</span>
+            <img src="/src/images/developed-icon.svg" alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </footer>
+        <script type="module" src="/src/scripts/site-header.js"></script>
+  </body>
+</html>

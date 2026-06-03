@@ -1,0 +1,54 @@
+<svg width="900" height="572" viewBox="0 0 900 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="572" fill="#F5F2E8"/>
+  <g opacity="0.95">
+    <path d="M0 96H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M0 168H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M0 240H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M0 312H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M0 384H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M0 456H900" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M90 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M180 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M270 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M360 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M450 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M540 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M630 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M720 0V572" stroke="#E5D7B6" stroke-width="2"/>
+    <path d="M810 0V572" stroke="#E5D7B6" stroke-width="2"/>
+  </g>
+  <g opacity="0.55" fill="#C9E6B2">
+    <path d="M42 38L112 32L132 76L84 118L36 94Z"/>
+    <path d="M190 22L248 34L252 84L202 96L170 56Z"/>
+    <path d="M320 50L396 18L438 58L408 112L334 98Z"/>
+    <path d="M538 28L606 18L658 48L640 96L570 108L530 70Z"/>
+    <path d="M716 42L790 28L846 62L828 112L754 102Z"/>
+    <path d="M62 208L118 186L162 222L142 286L82 296L32 254Z"/>
+    <path d="M228 210L300 188L340 236L310 300L234 292L194 252Z"/>
+    <path d="M420 204L486 186L536 220L512 286L450 296L404 248Z"/>
+    <path d="M610 198L676 182L732 216L708 286L646 294L596 252Z"/>
+    <path d="M768 202L860 178L900 224L882 286L810 292L760 244Z"/>
+    <path d="M24 392L84 374L132 410L110 476L44 488L0 444L0 400Z"/>
+    <path d="M182 380L250 362L302 396L278 470L214 482L168 438Z"/>
+    <path d="M364 374L438 352L482 392L458 468L388 482L346 432Z"/>
+    <path d="M556 372L632 354L680 396L654 470L586 484L540 436Z"/>
+    <path d="M744 372L826 350L874 394L850 470L780 482L734 432Z"/>
+  </g>
+  <g fill="#F58A3B" opacity="0.7">
+    <circle cx="210" cy="102" r="4"/>
+    <circle cx="356" cy="156" r="4"/>
+    <circle cx="510" cy="124" r="4"/>
+    <circle cx="694" cy="188" r="4"/>
+    <circle cx="598" cy="332" r="4"/>
+    <circle cx="318" cy="308" r="4"/>
+    <circle cx="736" cy="402" r="4"/>
+    <circle cx="144" cy="444" r="4"/>
+  </g>
+  <g fill="#2E6FEB" opacity="0.5">
+    <circle cx="258" cy="78" r="3"/>
+    <circle cx="468" cy="256" r="3"/>
+    <circle cx="604" cy="84" r="3"/>
+    <circle cx="820" cy="318" r="3"/>
+  </g>
+  <text x="430" y="286" fill="#4D4D4D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Москва</text>
+</svg>

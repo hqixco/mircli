@@ -1,0 +1,67 @@
+@import './home.css';
+
+.page--error main {
+  display: block;
+}
+
+.error-page {
+  padding: 26px 0 0;
+}
+
+.error-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 40px;
+  min-height: 620px;
+}
+
+.error-hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.error-hero__content p {
+  margin: 0 0 34px;
+  font-size: 28px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.error-hero__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.error-hero__actions .button {
+  min-width: 290px;
+  min-height: 38px;
+}
+
+@media (max-width: 1180px) {
+  .error-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .error-page {
+    padding-top: 18px;
+  }
+
+  .error-hero__content p {
+    font-size: 22px;
+  }
+
+  .error-hero__actions {
+    flex-direction: column;
+  }
+
+  .error-hero__actions .button {
+    min-width: 0;
+    width: 100%;
+  }
+}
