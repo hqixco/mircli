@@ -22,7 +22,7 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Мощность</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
               </div>
               <div class="catalog-filter__body">
                 <label><input type="checkbox" /> 20 м² - 2 кВт</label>
@@ -35,14 +35,14 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Цена</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
               </div>
               <div class="catalog-filter__body">
                 <div class="catalog-filter__range">
                   <input type="text" value="0" />
-                  <span>—</span>
+                  <span class="catalog-filter__range-separator" aria-hidden="true"></span>
                   <input type="text" value="321 456" />
-                  <span>руб.</span>
+                  <span class="catalog-filter__range-currency">руб.</span>
                 </div>
               </div>
             </section>
@@ -50,14 +50,28 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Производители</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> Daikin</label>
+                <label><input type="checkbox" /> Mitsubishi Electric</label>
+                <label><input type="checkbox" /> Mitsubishi Heavy</label>
+                <label><input type="checkbox" /> Toshiba</label>
+                <label><input type="checkbox" /> Panasonic</label>
+                <label><input type="checkbox" /> LG</label>
+                <label><input type="checkbox" /> Samsung</label>
+                <label><input type="checkbox" /> Gree</label>
+                <label><input type="checkbox" /> Hisense</label>
+                <label><input type="checkbox" /> Ballu</label>
+                <label><input type="checkbox" /> Haier</label>
+                <label><input type="checkbox" /> Kentatsu</label>
               </div>
             </section>
 
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Компрессор</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
               </div>
               <div class="catalog-filter__body">
                 <label><input type="checkbox" /> Инвертор</label>
@@ -68,7 +82,7 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Технологии</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
               </div>
               <div class="catalog-filter__body">
                 <label><input type="checkbox" /> Антиаллергенный фильтр</label>
@@ -81,7 +95,7 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Подмес свежего воздуха</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
               </div>
               <div class="catalog-filter__body">
                 <label><input type="checkbox" /> Авто режим</label>
@@ -94,13 +108,22 @@
             <section class="catalog-filter">
               <div class="catalog-filter__head">
                 <span>Тип хладагента</span>
-                <i class="catalog-filter__chevron" aria-hidden="true"></i>
+                <img class="catalog-filter__chevron" src="/src/images/catalog-chevron.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="catalog-filter__body">
+                <label><input type="checkbox" /> R32</label>
+                <label><input type="checkbox" /> R410A</label>
+                <label><input type="checkbox" /> R22</label>
+                <label><input type="checkbox" /> R290</label>
               </div>
             </section>
 
             <div class="catalog-filter__actions">
               <button type="button" class="button button--dark">применить</button>
-              <a class="catalog-filter__reset" href="#">сбросить</a>
+              <a class="catalog-filter__reset" href="#">
+                <span>сбросить</span>
+                <img src="/src/images/catalog-reset.svg" alt="" aria-hidden="true" />
+              </a>
             </div>
           </aside>
 
@@ -315,13 +338,13 @@
             </div>
 
             <nav class="catalog-products__pagination" aria-label="Пагинация">
-              <span class="arrow">‹</span>
+              <img class="arrow arrow--left" src="/src/images/catalog-pagination-arrow.svg" alt="" aria-hidden="true" />
               <a class="is-current" href="#">1</a>
               <a href="#">2</a>
               <a href="#">3</a>
               <span>...</span>
               <a href="#">6</a>
-              <span class="arrow">›</span>
+              <img class="arrow arrow--right" src="/src/images/catalog-pagination-arrow.svg" alt="" aria-hidden="true" />
             </nav>
           </section>
         </div>
@@ -332,7 +355,7 @@
       <div class="container">
         <div class="site-footer__top">
           <div class="site-footer__logo">
-            <span class="site-footer__logo-mark" aria-hidden="true"></span>
+            <img class="site-footer__logo-mark" src="/src/images/logo.svg" alt="MiCi" />
           </div>
 
           <div class="site-footer__block">
@@ -374,6 +397,7 @@
       </div>
     </footer>
     <script type="module" src="/src/scripts/product-card-icons.js"></script>
+    <script type="module" src="/src/scripts/catalog-filters.js"></script>
     <script type="module" src="/src/scripts/site-header.js"></script>
   </body>
 </html>

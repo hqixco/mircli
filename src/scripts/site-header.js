@@ -1,4 +1,5 @@
-import logoHeader from '../images/logo-header.png';
+import './site-footer.js';
+import logoHeader from '../images/logo.svg';
 import searchIcon from '../images/search-icon.svg';
 import catalogIcon from '../images/catalog-icon.svg';
 import favoriteIcon from '../images/favorite-icon.svg';
@@ -71,21 +72,20 @@ function renderHeader() {
         <a class="site-header__logo" href="/src/pages/index.html" aria-label="На главную">
           <img class="site-header__logo-mark" src="${logoHeader}" alt="" width="140" height="40" />
         </a>
-        <a class="site-header__email" href="mailto:${EMAIL}">${EMAIL}</a>
       </div>`;
 
-  const bottom = layout === 'home'
+  const bottom = layout === 'phone'
     ? `<div class="site-header__bottom">
+        <div class="container site-header__bottom-inner">
+          <a class="site-header__phone" href="tel:+79999999999">${PHONE}</a>
+        </div>
+      </div>`
+    : `<div class="site-header__bottom">
         <div class="container site-header__bottom-inner">
           <a class="site-header__email" href="mailto:${EMAIL}">${EMAIL}</a>
           <a class="site-header__phone" href="tel:+79999999999">${PHONE}</a>
         </div>
-      </div>`
-    : layout === 'phone'
-      ? `<div class="site-header__phone container">
-          <a href="tel:+79999999999">${PHONE}</a>
-        </div>`
-      : '';
+      </div>`;
 
   host.innerHTML = `
     <div class="site-header__top">
