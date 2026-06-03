@@ -1,10 +1,14 @@
+const productCardImage = new URL('../images/product-card.jpg', import.meta.url).href;
+const favoriteIcon = new URL('../images/favorite-icon.svg', import.meta.url).href;
+const compareIcon = new URL('../images/catalog-icon.svg', import.meta.url).href;
+
 const CARD_HTML = `
   <article class="product-card">
     <div class="product-card__media">
-      <img src="/src/images/product-card.jpg" alt="Vickers Smart VCH-07HE" />
+      <img src="${productCardImage}" alt="Vickers Smart VCH-07HE" />
       <div class="product-card__icons" aria-hidden="true">
-        <img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" />
-        <img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" />
+        <img src="${favoriteIcon}" alt="" aria-hidden="true" />
+        <img src="${compareIcon}" alt="" aria-hidden="true" />
       </div>
     </div>
     <div class="product-card__body">
