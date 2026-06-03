@@ -19,10 +19,10 @@ const PHONE = '+7 999 999 99 99';
 const EMAIL = 'info@mircl.ru';
 const ICONS = [
   { alt: 'Поиск', src: searchIcon, action: 'search' },
-  { alt: 'Каталог', src: catalogIcon },
-  { alt: 'Избранное', src: favoriteIcon },
-  { alt: 'Корзина', src: cartIcon },
-  { alt: 'Профиль', src: profileIcon },
+  { alt: 'Каталог', src: catalogIcon, action: 'catalog' },
+  { alt: 'Избранное', src: favoriteIcon, action: 'favorite' },
+  { alt: 'Корзина', src: cartIcon, action: 'cart' },
+  { alt: 'Профиль', src: profileIcon, action: 'profile' },
 ];
 
 function renderNav(activePage) {
@@ -35,11 +35,11 @@ function renderNav(activePage) {
 function renderActions() {
   return ICONS.map(({ alt, src, action }) => {
     if (action === 'search') {
-      return `<button type="button" class="site-header__action-search" aria-label="${alt}" data-header-search-trigger><img src="${src}" alt="" aria-hidden="true" /></button>`;
+      return `<button type="button" class="site-header__action-search" aria-label="${alt}" data-header-action="search" data-header-search-trigger><img src="${src}" alt="" aria-hidden="true" /></button>`;
     }
 
     const ariaLabel = ` aria-label="${alt}"`;
-    return `<a href="#"${ariaLabel}><img src="${src}" alt="" aria-hidden="true" /></a>`;
+    return `<a href="#"${ariaLabel} data-header-action="${action}"><img src="${src}" alt="" aria-hidden="true" /></a>`;
   }).join('');
 }
 
@@ -107,6 +107,11 @@ function renderHeader() {
   `;
 
   const actions = host.querySelector('.site-header__actions');
+  const updateScrolledState = () => {
+    const isScrolled = window.scrollY > 0;
+    host.classList.toggle('site-header--scrolled', isScrolled);
+  };
+
   const openSearch = () => {
     if (!actions) {
       return;
@@ -153,6 +158,9 @@ function renderHeader() {
   };
 
   bindSearchTrigger();
+  updateScrolledState();
+
+  window.addEventListener('scroll', updateScrolledState, { passive: true });
 }
 
 renderHeader();

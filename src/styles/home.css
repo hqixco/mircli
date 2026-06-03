@@ -83,6 +83,16 @@ input {
   inset: 0 0 auto 0;
 }
 
+.site-header--scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 24px rgba(2, 10, 17, 0.08);
+}
+
+.page--home .site-header--scrolled {
+  position: fixed;
+  inset: 0 0 auto 0;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -90,6 +100,11 @@ input {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    backdrop-filter 0.2s ease,
+    -webkit-backdrop-filter 0.2s ease;
 }
 
 .site-header__top {
@@ -116,6 +131,54 @@ input {
   width: 140px;
   height: auto;
   margin-bottom: 4px;
+}
+
+.site-header--scrolled .site-header__top {
+  padding: 0;
+}
+
+.site-header--scrolled .site-header__top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 65px;
+}
+
+.site-header--scrolled .site-header__top-left {
+  gap: 10px;
+}
+
+.site-header--scrolled .site-header__logo {
+  width: 122px;
+  margin-bottom: 0;
+}
+
+.site-header--scrolled .site-header__nav,
+.site-header--scrolled .site-header__email,
+.site-header--scrolled .site-header__bottom {
+  display: none;
+}
+
+.site-header--scrolled .site-header__actions {
+  gap: 8px;
+}
+
+.site-header--scrolled .site-header__actions [data-header-action="catalog"],
+.site-header--scrolled .site-header__actions [data-header-action="favorite"],
+.site-header--scrolled .site-header__actions [data-header-action="profile"] {
+  display: none;
+}
+
+.site-header--scrolled .site-header__actions [data-header-action="search"],
+.site-header--scrolled .site-header__actions [data-header-action="cart"] {
+  display: inline-flex;
+}
+
+.site-header--scrolled .site-header__actions [data-header-action="cart"] {
+  width: 62px;
+  height: 32px;
+  background: #111;
 }
 
 .site-header__logo-mark {
@@ -225,8 +288,8 @@ input {
   content: '';
   position: absolute;
   left: 12px;
-  right: 86px;
-  bottom: 0;
+  right: 97px;
+  bottom: 6px;
   height: 1px;
   background: #86868c;
   pointer-events: none;
@@ -235,11 +298,12 @@ input {
 .site-header__search input {
   flex: 1 1 auto;
   min-width: 180px;
-  height: 32px;
+  height: 33px;
   padding: 0 12px;
   border: 1px solid #000;
-  background: #fff;
+  background: transparent;
   color: var(--text);
+  font-size: 18px;
 }
 
 .site-header__search input::placeholder {
@@ -268,7 +332,7 @@ input {
   align-items: center;
   justify-content: space-between;
   min-height: 36px;
-  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #D5D5D5;
 }
 
 .site-header__phone {
@@ -672,7 +736,7 @@ input {
   font-size: 48px !important;
   line-height: 1.2;
   text-transform: uppercase;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #D5D5D5;
   padding-bottom: 12px;
 }
 
