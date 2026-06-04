@@ -13,10 +13,13 @@
   grid-template-columns: 1fr 1fr;
   min-height: 572px;
   border: 1px solid #d8d8d8;
+  overflow: hidden;
   margin-bottom: 70px;
 }
 
 .contacts-hero__content {
+  display: flex;
+  flex-direction: column;
   padding: 40px;
 }
 
@@ -30,6 +33,7 @@
 .contacts-hero__items {
   display: grid;
   gap: 21px;
+  max-width: 620px;
   margin-bottom: 44px;
 }
 
@@ -45,11 +49,13 @@
   margin: 0;
   font-size: 20px;
   line-height: 1.38;
+  overflow-wrap: anywhere;
 }
 
 .contacts-hero__hours p {
   display: flex;
   gap: 32px;
+  align-items: baseline;
 }
 
 .contacts-hero__hours p + p {
@@ -62,9 +68,11 @@
 }
 
 .contacts-hero__button {
+  align-self: flex-start;
   min-width: 188px;
   padding: 0 18px;
   min-height: 32px;
+  margin-top: auto;
 }
 
 .contacts-hero__map {
@@ -83,6 +91,19 @@
     grid-template-columns: 1fr;
   }
 
+  .contacts-hero__content {
+    padding: 32px;
+  }
+
+  .contacts-hero h1 {
+    margin-bottom: 32px;
+  }
+
+  .contacts-hero__items {
+    max-width: none;
+    margin-bottom: 32px;
+  }
+
   .contacts-hero__map {
     min-height: 420px;
   }
@@ -93,13 +114,31 @@
     padding-top: 18px;
   }
 
+  .contacts-page .container {
+    padding-inline: 16px;
+  }
+
+  .contacts-page__breadcrumbs {
+    margin-bottom: 28px;
+  }
+
   .contacts-hero__content {
     padding: 24px 18px;
   }
 
   .contacts-hero h1 {
     margin-bottom: 24px;
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .contacts-hero__items {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .contacts-hero__items span {
+    margin-bottom: 8px;
+    font-size: 12px;
   }
 
   .contacts-hero__items p {
@@ -107,7 +146,21 @@
   }
 
   .contacts-hero__hours p {
-    gap: 16px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 8px 12px;
+  }
+
+  .contacts-hero__hours b {
+    min-width: 0;
+  }
+
+  .contacts-hero__button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contacts-hero__map {
+    min-height: 320px;
   }
 }

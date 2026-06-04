@@ -8,6 +8,10 @@
   padding: 26px 0 0;
 }
 
+.privacy-page__breadcrumbs {
+  margin: 0 0 42px;
+}
+
 .privacy-page__title {
   margin: 0 0 44px;
   font-size: 36px;
@@ -16,9 +20,9 @@
 }
 
 .privacy-content {
-  max-width: 1420px;
+  max-width: 1120px;
   font-size: 18px;
-  line-height: 1.32;
+  line-height: 1.42;
   color: #202020;
   margin-bottom: 45px;
 }
@@ -26,6 +30,34 @@
 .privacy-content p {
   margin: 0 0 22px;
   font-size: 18px;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1180px) {
+  .privacy-page {
+    padding-top: 22px;
+  }
+
+  .privacy-page__breadcrumbs {
+    margin-bottom: 30px;
+  }
+
+  .privacy-page__title {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
+
+  .privacy-content {
+    max-width: 100%;
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+
+  .privacy-content p {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -33,11 +65,25 @@
     padding-top: 18px;
   }
 
+  .privacy-page__breadcrumbs {
+    margin-bottom: 24px;
+  }
+
   .privacy-page__title {
+    margin-bottom: 15px;
     font-size: 24px;
+    line-height: 1.08;
   }
 
   .privacy-content {
     font-size: 15px;
+    line-height: 1.46;
+    margin-bottom: 28px;
+  }
+
+  .privacy-content p {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.25;
   }
 }

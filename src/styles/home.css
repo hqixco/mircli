@@ -985,6 +985,8 @@ input {
 }
 
 .news-card {
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 40px;
@@ -1019,6 +1021,9 @@ input {
 }
 
 .news-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding-top: 23px;
 }
 
@@ -1038,6 +1043,7 @@ input {
 }
 
 .news-card__body a {
+  margin-top: auto;
   width: 115px;
   display: block;
   min-height: 33px;
@@ -1674,7 +1680,7 @@ input {
   .site-header__action-search,
   .site-header__actions a {
     width: 32px;
-    height: 28px;
+    height: 32px;
   }
 
   .site-header__actions a:not(:first-child) {
@@ -2305,6 +2311,10 @@ input {
   }
 
   .catalog__breadcrumbs {
+    font-size: 12px;
+  }
+
+  .breadcrumbs {
     font-size: 12px;
   }
 }

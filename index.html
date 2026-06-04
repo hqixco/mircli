@@ -52,40 +52,15 @@
         transition: border-color 0.2s ease, transform 0.2s ease;
       }
 
-      
-
-      a.is-highlighted {
-        border-color: #f28a2d;
-        color: #b85f00;
-        background: #fff4e8;
-      }
-
-      a.is-highlighted--ready {
-        border-color: #7fcb9d;
-        color: #176a3b;
-        background: #edf9f1;
-      }
-
-      a.is-highlighted:hover {
-        border-color: #d97918;
+      a:hover {
+        border-color: #cfd6e2;
         transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(242, 138, 45, 0.16);
-        background: #fff1df;
+        box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
       }
 
-      a.is-highlighted--ready:hover {
-        border-color: #58ad79;
-        box-shadow: 0 10px 24px rgba(28, 140, 74, 0.14);
-        background: #e3f5e9;
-      }
-
-      a.is-highlighted:focus-visible {
-        outline: 2px solid #d97918;
+      a:focus-visible {
+        outline: 2px solid #293c5a;
         outline-offset: 2px;
-      }
-
-      a.is-highlighted--ready:focus-visible {
-        outline-color: #58ad79;
       }
 
       .desktop-badge {
@@ -106,11 +81,6 @@
         text-transform: uppercase;
         pointer-events: none;
       }
-
-      .desktop-badge--ready {
-        background: rgba(28, 140, 74, 0.14);
-        color: #1c8c4a;
-      }
     </style>
   </head>
   <body class="page page--index">
@@ -119,17 +89,17 @@
         <h1>Охлаждайкин Pages</h1>
         <p>Навигационная страница со ссылками на все HTML-страницы проекта.</p>
         <nav class="grid" aria-label="Страницы проекта">
-          <a class="is-highlighted is-highlighted--ready" href="/src/pages/index.html">Главная<span class="desktop-badge desktop-badge--ready">полностью готова</span></a>
-          <a class="is-highlighted is-highlighted--ready" href="/src/pages/catalog.html">Каталог<span class="desktop-badge desktop-badge--ready">полностью готова</span></a>
-          <a class="is-highlighted is-highlighted--ready" href="/src/pages/about.html">О компании<span class="desktop-badge desktop-badge--ready">полностью готова</span></a>
-          <a class="is-highlighted" href="/src/pages/contacts.html">Контакты<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/reviews.html">Отзывы<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/blog.html">Блог<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/article.html">Статья<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/product.html">Товар<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/service.html">Установка и обслуживание<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/privacy.html">Политика конфиденциальности<span class="desktop-badge">только десктоп</span></a>
-          <a class="is-highlighted" href="/src/pages/404.html">404<span class="desktop-badge">только десктоп</span></a>
+          <a href="/src/pages/index.html">Главная</a>
+          <a href="/src/pages/catalog.html">Каталог</a>
+          <a href="/src/pages/about.html">О компании</a>
+          <a href="/src/pages/contacts.html">Контакты</a>
+          <a href="/src/pages/reviews.html">Отзывы</a>
+          <a href="/src/pages/blog.html">Блог</a>
+          <a href="/src/pages/article.html">Статья</a>
+          <a href="/src/pages/product.html">Товар</a>
+          <a href="/src/pages/service.html">Установка и обслуживание</a>
+          <a href="/src/pages/privacy.html">Политика конфиденциальности</a>
+          <a href="/src/pages/404.html">404</a>
         </nav>
       </main>
     </div>

@@ -8,6 +8,10 @@
   padding: 26px 0 0;
 }
 
+.service-page__breadcrumbs {
+  margin: 0 0 42px;
+}
+
 .service-page__title {
   margin: 0 0 38px;
   font-size: 28px;
@@ -23,6 +27,7 @@
 }
 
 .service-column {
+  min-width: 0;
   padding: 40px;
 }
 
@@ -63,6 +68,7 @@
   font-size: 17px;
   line-height: 1.3;
   color: #333;
+  overflow-wrap: anywhere;
 }
 
 .service-column li span {
@@ -81,13 +87,62 @@
 }
 
 @media (max-width: 1180px) {
+  .service-page__breadcrumbs {
+    margin-bottom: 28px;
+  }
+
+  .service-page__title {
+    margin-bottom: 32px;
+    font-size: 26px;
+  }
+
   .service-columns {
     grid-template-columns: 1fr;
+    margin-bottom: 56px;
+  }
+
+  .service-column {
+    padding: 28px;
   }
 
   .service-column + .service-column {
     border-left: 0;
     border-top: 1px solid #d7d7d7;
+  }
+
+  .service-column h2 {
+    margin-bottom: 30px;
+    font-size: 20px !important;
+  }
+
+  .service-column p {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .service-column h3 {
+    margin: 28px 0 14px;
+    font-size: 16px;
+  }
+
+  .service-column ul {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .service-column li {
+    padding-left: 46px;
+    font-size: 15px;
+  }
+
+  .service-column li span {
+    top: 11px;
+    width: 26px;
+  }
+
+  .service-column .button {
+    min-width: 180px;
+    min-height: 30px;
   }
 }
 
@@ -96,16 +151,58 @@
     padding-top: 18px;
   }
 
+  .service-page__breadcrumbs {
+    margin-bottom: 28px;
+  }
+
   .service-page__title {
+    margin-bottom: 24px;
     font-size: 24px;
   }
 
   .service-column {
-    padding: 24px 16px;
+    padding: 20px 16px;
+  }
+
+  .service-column h2 {
+    margin-bottom: 22px;
+    font-size: 18px !important;
   }
 
   .service-column p,
   .service-column li {
     font-size: 15px;
+  }
+
+  .service-column p {
+    margin-bottom: 16px;
+  }
+
+  .service-column h3 {
+    margin: 24px 0 12px;
+    font-size: 15px;
+  }
+
+  .service-column ul {
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .service-column li {
+    padding-left: 38px;
+  }
+
+  .service-column li span {
+    top: 10px;
+    width: 22px;
+  }
+
+  .service-column .button {
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+    margin-top: 4px;
+    font-size: 14px;
+    padding: 0;
   }
 }
