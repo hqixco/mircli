@@ -13,10 +13,11 @@
   grid-template-columns: 1fr 1fr;
   min-height: 572px;
   border: 1px solid #d8d8d8;
+  margin-bottom: 70px;
 }
 
 .contacts-hero__content {
-  padding: 36px 38px 34px;
+  padding: 40px;
 }
 
 .contacts-hero h1 {
@@ -28,13 +29,13 @@
 
 .contacts-hero__items {
   display: grid;
-  gap: 24px;
+  gap: 21px;
   margin-bottom: 44px;
 }
 
 .contacts-hero__items span {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 11px;
   color: #d2d2d2;
   font-size: 14px;
   text-transform: lowercase;
@@ -49,6 +50,10 @@
 .contacts-hero__hours p {
   display: flex;
   gap: 32px;
+}
+
+.contacts-hero__hours p + p {
+  margin-top: 10px;
 }
 
 .contacts-hero__hours b {
@@ -66,10 +71,11 @@
   min-height: 100%;
 }
 
-.contacts-hero__map img {
+.contacts-hero__map iframe {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border: 0;
 }
 
 @media (max-width: 1180px) {

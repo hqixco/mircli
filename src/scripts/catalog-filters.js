@@ -1,9 +1,43 @@
 function initCatalogFilters() {
   const filters = Array.from(document.querySelectorAll('.catalog-filter'));
+  const toggleButton = document.querySelector('.catalog-filters__toggle');
+  const panel = document.querySelector('.catalog-filters');
+  const backdrop = document.querySelector('.catalog-filters__backdrop');
 
   if (!filters.length) {
     return;
   }
+
+  const mobileQuery = window.matchMedia('(max-width: 720px)');
+
+  const setPanelOpen = (isOpen) => {
+    document.body.classList.toggle('catalog-filters-open', isOpen);
+    toggleButton?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (backdrop) {
+      backdrop.hidden = !isOpen;
+    }
+  };
+
+  const closePanel = () => setPanelOpen(false);
+
+  toggleButton?.addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('catalog-filters-open');
+    setPanelOpen(!isOpen);
+  });
+
+  backdrop?.addEventListener('click', closePanel);
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closePanel();
+    }
+  });
+
+  mobileQuery.addEventListener('change', (event) => {
+    if (!event.matches) {
+      closePanel();
+    }
+  });
 
   const setOpenState = (filter, isOpen) => {
     filter.classList.toggle('is-open', isOpen);
@@ -21,7 +55,7 @@ function initCatalogFilters() {
 
     head.setAttribute('role', 'button');
     head.setAttribute('tabindex', '0');
-    head.setAttribute('aria-expanded', index === 0 ? 'true' : 'false');
+    head.setAttribute('aria-expanded', 'true');
 
     if (body) {
       const bodyId = `catalog-filter-body-${index}`;
@@ -29,7 +63,7 @@ function initCatalogFilters() {
       head.setAttribute('aria-controls', bodyId);
     }
 
-    setOpenState(filter, index === 0);
+    setOpenState(filter, true);
 
     const toggle = () => {
       const nextState = !filter.classList.contains('is-open');
@@ -45,6 +79,10 @@ function initCatalogFilters() {
       }
     });
   });
+
+  if (!mobileQuery.matches) {
+    setPanelOpen(false);
+  }
 }
 
 initCatalogFilters();

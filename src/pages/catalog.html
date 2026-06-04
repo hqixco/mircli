@@ -13,10 +13,17 @@
     <main class="catalog">
       <div class="container">
         <nav class="breadcrumbs catalog__breadcrumbs" data-breadcrumbs='[{"label":"Главная","href":"/src/pages/index.html"},{"label":"Каталог"}]'></nav>
-        <h1 class="catalog__title">Каталог</h1>
+        <div class="catalog__header">
+          <h1 class="catalog__title">Каталог</h1>
+          <button class="catalog-filters__toggle" type="button" aria-controls="catalog-filters-panel" aria-expanded="false">
+            Фильтры
+          </button>
+        </div>
+
+        <div class="catalog-filters__backdrop" hidden></div>
 
         <div class="catalog__layout">
-          <aside class="catalog-filters" aria-label="Фильтры">
+          <aside class="catalog-filters" id="catalog-filters-panel" aria-label="Фильтры">
             <h2 class="catalog-filters__title">Фильтры</h2>
 
             <section class="catalog-filter">
@@ -39,10 +46,8 @@
               </div>
               <div class="catalog-filter__body">
                 <div class="catalog-filter__range">
-                  <input type="text" value="0" />
-                  <span class="catalog-filter__range-separator" aria-hidden="true"></span>
-                  <input type="text" value="321 456" />
-                  <span class="catalog-filter__range-currency">руб.</span>
+                  <input type="text" placeholder="ОТ" />
+                  <input type="text" placeholder="ДО" />
                 </div>
               </div>
             </section>
@@ -143,7 +148,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -166,7 +171,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -189,7 +194,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -212,7 +217,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -235,7 +240,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -258,7 +263,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -281,7 +286,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -304,7 +309,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>
@@ -327,7 +332,7 @@
                     <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
                   </dl>
                   <div class="product-card__footer">
-                    <strong>14 тыс ₽</strong>
+                  <strong>14 000 ₽</strong>
                     <div class="product-card__buttons">
                       <a href="#">подробнее</a>
                       <a class="is-dark" href="#">добавить в корзину</a>

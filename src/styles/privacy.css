@@ -9,8 +9,8 @@
 }
 
 .privacy-page__title {
-  margin: 0 0 24px;
-  font-size: 28px;
+  margin: 0 0 44px;
+  font-size: 36px;
   line-height: 1.05;
   text-transform: uppercase;
 }
@@ -20,10 +20,12 @@
   font-size: 18px;
   line-height: 1.32;
   color: #202020;
+  margin-bottom: 45px;
 }
 
 .privacy-content p {
   margin: 0 0 22px;
+  font-size: 18px;
 }
 
 @media (max-width: 720px) {

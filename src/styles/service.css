@@ -19,10 +19,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid #d7d7d7;
+  margin-bottom: 70px;
 }
 
 .service-column {
-  padding: 40px 38px 30px;
+  padding: 40px;
 }
 
 .service-column + .service-column {
@@ -30,8 +31,8 @@
 }
 
 .service-column h2 {
-  margin: 0 0 30px;
-  font-size: 26px;
+  margin: 0 0 40px;
+  font-size: 22px !important;
   font-weight: 400;
 }
 

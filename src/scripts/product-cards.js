@@ -20,7 +20,7 @@ const CARD_HTML = `
         <div><dt>Охлаждение, кВт</dt><dd>2.05</dd></div>
       </dl>
       <div class="product-card__footer">
-        <strong>14 тыс ₽</strong>
+        <strong>14 000 ₽</strong>
         <div class="product-card__buttons">
           <a href="/src/pages/product.html">подробнее</a>
           <a class="is-dark" href="#">добавить в корзину</a>
