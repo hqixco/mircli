@@ -7,7 +7,9 @@ const CARD_HTML = `
     <div class="product-card__media">
       <img src="${productCardImage}" alt="Vickers Smart VCH-07HE" />
       <div class="product-card__icons" aria-hidden="true">
-        <img src="${favoriteIcon}" alt="" aria-hidden="true" />
+        <button type="button" class="product-card__favorite" data-favorite-toggle aria-label="Добавить в избранное">
+          <img src="${favoriteIcon}" alt="" aria-hidden="true" />
+        </button>
         <img src="${compareIcon}" alt="" aria-hidden="true" />
       </div>
     </div>

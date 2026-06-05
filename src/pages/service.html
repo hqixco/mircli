@@ -34,7 +34,7 @@
               <li><span></span>Мульти-сплит системы - индивидуальный расчет</li>
               <li><span></span>Дополнительные работы (штробление стен, удлинение трассы и др.) - обсуждается отдельно</li>
             </ul>
-            <a class="button button--dark" href="/src/pages/contacts.html">вызвать специалиста</a>
+            <button type="button" class="button button--dark" data-modal-open="service-popup">вызвать специалиста</button>
           </article>
 
           <article class="service-column">
@@ -56,7 +56,7 @@
               <li><span></span>Заправка фреоном - от 1 500 ₽</li>
               <li><span></span>Комплексное обслуживание - от 4 000 ₽</li>
             </ul>
-            <a class="button button--dark" href="/src/pages/contacts.html">вызвать специалиста</a>
+            <button type="button" class="button button--dark" data-modal-open="service-popup">вызвать специалиста</button>
           </article>
         </section>
       </div>
@@ -107,7 +107,83 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="service-popup" data-modal aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__dialog request-modal" role="dialog" aria-modal="true" aria-labelledby="service-popup-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"></button>
+        <h2 id="service-popup-title">ВЫЗВАТЬ СПЕЦИАЛИСТА</h2>
+
+        <form class="request-form service-popup__form" action="#" method="post">
+          <input type="text" name="name" placeholder="имя" aria-label="Имя" />
+          <input type="email" name="email" placeholder="почта" aria-label="Почта" />
+
+          <div class="request-form__row">
+            <input type="tel" name="phone" placeholder="телефон" aria-label="Телефон" />
+            <input type="text" name="time" placeholder="время" aria-label="Время" />
+          </div>
+
+          <div class="request-form__select" aria-label="Удобное средство связи">
+            <button class="request-form__select-trigger" type="button" aria-expanded="false" data-request-select-trigger>
+              <span>удобное средство связи</span>
+              <span class="request-form__select-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="request-form__select-panel" hidden>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="telegram" />
+                <span>Telegram</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="whatsapp" />
+                <span>What’sApp</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="mobile" />
+                <span>Мобильная связь</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="request-form__select" aria-label="Услуга">
+            <button class="request-form__select-trigger" type="button" aria-expanded="false" data-request-select-trigger>
+              <span>услуга</span>
+              <span class="request-form__select-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="request-form__select-panel" hidden>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="installation" />
+                <span>Установка</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="maintenance" />
+                <span>Обслуживание</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="repair" />
+                <span>Ремонт</span>
+              </label>
+            </div>
+          </div>
+
+          <textarea name="message" rows="4" placeholder="сообщение" aria-label="Сообщение"></textarea>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="privacy" />
+            <span>Нажимая кнопку, вы даете согласие на обработку персональных данных, в соответствии с политикой конфиденциальности</span>
+          </label>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="ads" />
+            <span>Согласие на получение рекламных предложений по телефону и email</span>
+          </label>
+
+          <button type="submit" class="request-form__submit">отправить</button>
+        </form>
+      </div>
+    </div>
         <script type="module" src="/src/scripts/breadcrumbs.js"></script>
         <script type="module" src="/src/scripts/site-header.js"></script>
+        <script type="module" src="/src/scripts/service-popup.js"></script>
   </body>
 </html>

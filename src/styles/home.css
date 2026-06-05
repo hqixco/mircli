@@ -627,7 +627,19 @@ input {
   z-index: 3;
 }
 
-.product-card__icons img {
+.product-card__icons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.product-card__icons img,
+.product-card__icons button img {
   width: 17px;
   height: auto;
   display: block;
@@ -636,12 +648,15 @@ input {
 }
 
 .product-card__icons img:first-child:hover,
-.product-card__icons img:first-child:focus-visible {
+.product-card__icons img:first-child:focus-visible,
+.product-card__icons button:first-child:hover img,
+.product-card__icons button:first-child:focus-visible img {
   transform: scale(1.12);
   opacity: 0.9;
 }
 
-.product-card__icons img.is-favorite {
+.product-card__icons img.is-favorite,
+.product-card__icons button.is-favorite img {
   transform: scale(1.08);
 }
 

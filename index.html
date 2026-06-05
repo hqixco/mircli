@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mircli Pages</title>
+    <link rel="stylesheet" href="/src/styles/popup.css" />
     <style>
       :root {
         color-scheme: light;
@@ -12,21 +13,31 @@
       body {
         margin: 0;
         min-width: 320px;
-        font-family: Roboto, Arial, sans-serif;
-        background: #f4f4f6;
+        min-height: 100vh;
+        font-family: 'Onest', Arial, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(33, 170, 255, 0.12), transparent 32%),
+          linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
         color: #020a11;
       }
 
+      .page-shell {
+        min-height: 100vh;
+      }
+
       main {
+        display: flex;
+        flex-direction: column;
         max-width: 1120px;
+        min-height: 100vh;
         margin: 0 auto;
         padding: 40px 20px;
       }
 
       h1 {
         margin: 0 0 16px;
-        font-size: 32px;
-        font-weight: 500;
+        font-size: clamp(32px, 3vw, 48px);
+        font-weight: 600;
       }
 
       p {
@@ -38,6 +49,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 12px;
+        margin-bottom: 20px;
       }
 
       a {
@@ -81,6 +93,72 @@
         text-transform: uppercase;
         pointer-events: none;
       }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 63px;
+        padding: 0 60px;
+        border: 0;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .button--dark {
+        color: #fff;
+        background: #111;
+      }
+
+      .index-actions {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+        margin-top: auto;
+        padding-top: 28px;
+      }
+
+      .index-actions button {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 18px 18px 16px;
+        border-radius: 12px;
+        border: 1px solid #eaebee;
+        background: #fff;
+        color: #293c5a;
+        text-align: left;
+        box-shadow: none;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .index-actions button:hover {
+        border-color: #cfd6e2;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
+      }
+
+      .index-actions button:focus-visible {
+        outline: 2px solid #293c5a;
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          padding: 24px 16px;
+        }
+
+        .grid {
+          margin-bottom: 16px;
+        }
+
+        .index-actions button {
+          min-width: 0;
+        }
+
+      }
     </style>
   </head>
   <body class="page page--index">
@@ -101,7 +179,141 @@
           <a href="/src/pages/privacy.html">Политика конфиденциальности</a>
           <a href="/src/pages/404.html">404</a>
         </nav>
+        <div class="index-actions" aria-label="Попапы">
+          <button type="button" class="button button--dark" data-modal-open="index-request-popup">Оставить заявку</button>
+          <button type="button" class="button button--dark" data-modal-open="index-specialist-popup">Вызвать специалиста</button>
+        </div>
       </main>
     </div>
+
+    <div class="modal" id="index-request-popup" data-modal aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__dialog request-modal" role="dialog" aria-modal="true" aria-labelledby="index-request-popup-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"></button>
+        <h2 id="index-request-popup-title">ОСТАВИТЬ ЗАЯВКУ</h2>
+
+        <form class="request-form" action="#" method="post">
+          <input type="text" name="name" placeholder="имя" aria-label="Имя" />
+          <input type="email" name="email" placeholder="почта" aria-label="Почта" />
+
+          <div class="request-form__row">
+            <input type="tel" name="phone" placeholder="телефон" aria-label="Телефон" />
+            <input type="text" name="time" placeholder="время" aria-label="Время" />
+          </div>
+
+          <div class="request-form__select" aria-label="Удобное средство связи">
+            <button class="request-form__select-trigger" type="button" aria-expanded="false" data-request-select-trigger>
+              <span>удобное средство связи</span>
+              <span class="request-form__select-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="request-form__select-panel" hidden>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="telegram" />
+                <span>Telegram</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="whatsapp" />
+                <span>What’sApp</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="mobile" />
+                <span>Мобильная связь</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="privacy" />
+            <span>Нажимая кнопку, вы даете согласие на обработку персональных данных, в соответствии с политикой конфиденциальности</span>
+          </label>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="ads" />
+            <span>Согласие на получение рекламных предложений по телефону и email</span>
+          </label>
+
+          <button type="submit" class="request-form__submit">отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="index-specialist-popup" data-modal aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__dialog request-modal" role="dialog" aria-modal="true" aria-labelledby="index-specialist-popup-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"></button>
+        <h2 id="index-specialist-popup-title">ОСТАВИТЬ ЗАЯВКУ</h2>
+
+        <form class="request-form" action="#" method="post">
+          <input type="text" name="name" placeholder="имя" aria-label="Имя" />
+          <input type="email" name="email" placeholder="почта" aria-label="Почта" />
+
+          <div class="request-form__row">
+            <input type="tel" name="phone" placeholder="телефон" aria-label="Телефон" />
+            <input type="text" name="time" placeholder="время" aria-label="Время" />
+          </div>
+
+          <div class="request-form__select" aria-label="Удобное средство связи">
+            <button class="request-form__select-trigger" type="button" aria-expanded="false" data-request-select-trigger>
+              <span>удобное средство связи</span>
+              <span class="request-form__select-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="request-form__select-panel" hidden>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="telegram" />
+                <span>Telegram</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="whatsapp" />
+                <span>What’sApp</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="contact" value="mobile" />
+                <span>Мобильная связь</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="request-form__select" aria-label="Услуга">
+            <button class="request-form__select-trigger" type="button" aria-expanded="false" data-request-select-trigger>
+              <span>услуга</span>
+              <span class="request-form__select-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="request-form__select-panel" hidden>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="installation" />
+                <span>Установка</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="maintenance" />
+                <span>Обслуживание</span>
+              </label>
+              <label class="request-form__radio">
+                <input type="radio" name="service" value="repair" />
+                <span>Ремонт</span>
+              </label>
+            </div>
+          </div>
+
+          <textarea name="message" rows="4" placeholder="сообщение" aria-label="Сообщение"></textarea>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="privacy" />
+            <span>Нажимая кнопку, вы даете согласие на обработку персональных данных, в соответствии с политикой конфиденциальности</span>
+          </label>
+
+          <label class="request-form__consent">
+            <input type="checkbox" name="ads" />
+            <span>Согласие на получение рекламных предложений по телефону и email</span>
+          </label>
+
+          <button type="submit" class="request-form__submit">отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/scripts/root-popups.js"></script>
   </body>
 </html>

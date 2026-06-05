@@ -1,4 +1,5 @@
 @import './home.css';
+@import './popup.css';
 
 .page--contacts main {
   display: block;
@@ -86,6 +87,72 @@
   border: 0;
 }
 
+.contacts-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.contacts-popup.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.contacts-popup__dialog {
+  position: relative;
+  width: 930px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: transform 0.22s ease;
+}
+
+.contacts-popup.is-open .contacts-popup__dialog {
+  transform: translateY(0);
+}
+
+.contacts-popup .request-form {
+  width: min(100%, 565px);
+}
+
+.contacts-popup .request-form__select--open .request-form__select-panel {
+  display: block;
+}
+
+.contacts-popup__close {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: url('/src/images/frame-1171275400.svg') center / 24px 24px no-repeat;
+  box-shadow: none;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  z-index: 4;
+  cursor: pointer;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.contacts-popup__close:hover,
+.contacts-popup__close:focus-visible {
+  background-color: transparent;
+  opacity: 0.82;
+}
+
 @media (max-width: 1180px) {
   .contacts-hero {
     grid-template-columns: 1fr;
@@ -162,5 +229,13 @@
 
   .contacts-hero__map {
     min-height: 320px;
+  }
+
+  .contacts-popup {
+    padding: 12px;
+  }
+
+  .contacts-popup .request-form {
+    width: 100%;
   }
 }

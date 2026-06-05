@@ -45,7 +45,9 @@
             <div class="product-summary__top">
               <p class="product-summary__kicker">Настенный кондиционер</p>
               <div class="product-summary__icons" aria-hidden="true">
-                <img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" />
+                <button type="button" class="product-summary__favorite" aria-label="Добавить в избранное">
+                  <img src="/src/images/favorite-icon.svg" alt="" aria-hidden="true" />
+                </button>
                 <img src="/src/images/catalog-icon.svg" alt="" aria-hidden="true" />
               </div>
             </div>
@@ -107,20 +109,125 @@
             </p>
           </div>
 
-          <div class="product-overview__text" data-product-tab="1" hidden>
-            <p>Основные характеристики модели вынесены в табличный блок. Здесь можно разместить компрессор, площадь, мощность охлаждения, уровень шума и другие параметры.</p>
+          <div class="product-overview__text product-specs" data-product-tab="1" hidden>
+            <h2>ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
+
+            <div class="product-specs__grid">
+              <div class="product-specs__column">
+                <dl class="product-specs__list">
+                  <div><dt>Страна бренда</dt><dd>Китай</dd></div>
+                  <div><dt>Производитель</dt><dd>Китай</dd></div>
+                  <div><dt>Компрессор</dt><dd>Не инвертор</dd></div>
+                  <div><dt>Площадь, м²</dt><dd>22</dd></div>
+                  <div><dt>Режим работы</dt><dd>Холод/тепло</dd></div>
+                  <div><dt>Охлаждение, кВт</dt><dd>2,23</dd></div>
+                  <div><dt>Обогрев, кВт</dt><dd>2,4</dd></div>
+                  <div><dt>Wi-Fi</dt><dd>Да</dd></div>
+                  <div><dt>Завод</dt><dd>Midea Equipment Corp</dd></div>
+                  <div><dt>Марка компрессора</dt><dd>GMCC</dd></div>
+                  <div><dt>Потребление при охлаждении, кВт</dt><dd>0,695</dd></div>
+                  <div><dt>Потребление при обогреве, кВт</dt><dd>0,665</dd></div>
+                  <div><dt>Охлаждающая способность, тыс. BTU</dt><dd>7</dd></div>
+                  <div><dt>Диапазон t на охлаждение, C</dt><dd>+18...+43</dd></div>
+                  <div><dt>Диапазон t на обогрев, C</dt><dd>-7...+24</dd></div>
+                  <div><dt>Расход воздуха, м3/ч</dt><dd>436</dd></div>
+                  <div><dt>Хладагент</dt><dd>R410A</dd></div>
+                  <div><dt>Max длина трассы, м</dt><dd>20</dd></div>
+                  <div><dt>ø газовой трубы, дюйм</dt><dd>3/8</dd></div>
+                  <div><dt>ø жидкостной трубы, дюйм</dt><dd>1/4</dd></div>
+                </dl>
+              </div>
+
+              <div class="product-specs__column">
+                <dl class="product-specs__list">
+                  <div><dt>Предварительный фильтр</dt><dd>Да</dd></div>
+                  <div><dt>Непрерывное движение заслонок</dt><dd>Да</dd></div>
+                  <div><dt>Самодиагностика</dt><dd>Да</dd></div>
+                  <div><dt>Теплый пуск</dt><dd>Да</dd></div>
+                  <div><dt>Авторестарт</dt><dd>Да</dd></div>
+                  <div><dt>Авто режим</dt><dd>Да</dd></div>
+                  <div><dt>Ночной режим</dt><dd>Да</dd></div>
+                  <div><dt>Дисплей</dt><dd>Да</dd></div>
+                  <div><dt>Пульт Д/У</dt><dd>Да</dd></div>
+                  <div><dt>Цвет</dt><dd>Белый</dd></div>
+                  <div><dt>Энергоэффективность</dt><dd>A</dd></div>
+                  <div><dt>Сила тока на охлаждение, А</dt><dd>3,05</dd></div>
+                  <div><dt>Сила тока на обогрев, А</dt><dd>2.95</dd></div>
+                  <div><dt>Подключение питания</dt><dd>Внутренний блок</dd></div>
+                  <div><dt>Сечение кабеля питания, мм²</dt><dd>3x1,5</dd></div>
+                  <div><dt>Сечения межблочного кабеля, мм²</dt><dd>5x1,5</dd></div>
+                  <div><dt>Автомат токовой защиты, А</dt><dd>10</dd></div>
+                  <div><dt>Max перепад высот, м</dt><dd>8</dd></div>
+                  <div><dt>Гарантия</dt><dd>2 года</dd></div>
+                  <div><dt>Код производителя</dt><dd>HC-1478071/HC-1478073</dd></div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="product-specs__blocks">
+              <section class="product-specs__block">
+                <h3>ВНЕШНИЙ БЛОК</h3>
+                <dl class="product-specs__list product-specs__list--compact">
+                  <div><dt>Уровень шума, дБа</dt><dd>54</dd></div>
+                  <div><dt>Габариты (ВхШхГ), см</dt><dd>49,5x72x27</dd></div>
+                  <div><dt>Вес, кг</dt><dd>25</dd></div>
+                  <div><dt>Высота, см</dt><dd>49,5</dd></div>
+                  <div><dt>Ширина, см</dt><dd>72</dd></div>
+                  <div><dt>Глубина, см</dt><dd>27</dd></div>
+                </dl>
+              </section>
+
+              <section class="product-specs__block">
+                <h3>ВНУТРЕННИЙ БЛОК</h3>
+                <dl class="product-specs__list product-specs__list--compact">
+                  <div><dt>Горизонтальная регулировка потока</dt><dd>Автоматическая</dd></div>
+                  <div><dt>Уровень шума, дБа</dt><dd>25,5</dd></div>
+                  <div><dt>Габариты (ВхШхГ), см</dt><dd>28,5x71,5x19,4</dd></div>
+                  <div><dt>Вес, кг</dt><dd>7</dd></div>
+                  <div><dt>Высота, см</dt><dd>28,5</dd></div>
+                  <div><dt>Ширина, см</dt><dd>71,5</dd></div>
+                  <div><dt>Глубина, см</dt><dd>19,4</dd></div>
+                </dl>
+              </section>
+            </div>
           </div>
 
-          <div class="product-overview__text" data-product-tab="2" hidden>
-            <p>Доставка и оплата по Москве и регионам доступны по согласованию с менеджером. Возможен самовывоз, доставка до двери и безналичная оплата.</p>
+          <div class="product-overview__text product-shipping" data-product-tab="2" hidden>
+            <section class="product-shipping__section">
+              <h2>ДОСТАВКА</h2>
+              <ul class="product-shipping__list">
+                <li>По городу — курьером в течение 1-2 дней (возможен срочный выезд в день заказа)</li>
+                <li>В регионы — транспортными компаниями (сроки уточняйте у менеджера)</li>
+                <li>Самовывоз — со склада по адресу: [ваш адрес]</li>
+              </ul>
+            </section>
+
+            <section class="product-shipping__section">
+              <h2>ОПЛАТА</h2>
+              <ul class="product-shipping__list">
+                <li>Наличными — при получении (для курьерской доставки)</li>
+                <li>Безналичный расчет — перевод на расчетный счет (для юр. лиц и ИП)</li>
+                <li>Картой онлайн — безопасно через [ПСБ/Сбербанк/ЮKassa]</li>
+                <li>Рассрочка 0% — от 3 до 12 месяцев (подробности уточняйте)</li>
+              </ul>
+            </section>
           </div>
 
-          <div class="product-overview__text" data-product-tab="3" hidden>
-            <p>Монтаж выполняется сертифицированными специалистами. Перед установкой согласовываются трассы, место размещения и особенности объекта.</p>
+          <div class="product-overview__text product-install" data-product-tab="3" hidden>
+            <p>Мы предлагаем полный комплекс услуг по установке климатического оборудования с гарантией качества и использованием оригинальных расходных материалов. Наши специалисты аккуратно установят внутренний и наружный блоки, проложат коммуникации до 5 метров, выполнят вакуумирование системы и заправку фреоном.</p>
+
+            <p>После монтажа мы обязательно проведем тестирование оборудования и подробно объясним вам правила эксплуатации. Для срочных случаев доступен выезд монтажной бригады уже в день обращения.</p>
+
+            <p>Дополнительно предлагаем услуги по демонтажу старой техники, удлинению трассы и работам на сложных поверхностях. Все работы выполняются строго по ГОСТу с предоставлением 2-летней гарантии.</p>
+
+            <p>Стоимость стандартного монтажа начинается от 3 500 рублей. Оставьте заявку прямо сейчас, и наши менеджеры подберут для вас удобное время для установки нового кондиционера!</p>
           </div>
 
-          <div class="product-overview__text" data-product-tab="4" hidden>
-            <p>Сервисное обслуживание включает диагностику, чистку и регламентные работы. Поддержка доступна в течение всего срока эксплуатации.</p>
+          <div class="product-overview__text product-service" data-product-tab="4" hidden>
+            <h2>СТОИМОСТЬ СЕРВИСНОГО ОБСЛУЖИВАНИЯ</h2>
+            <p>Стоимость разового сервисного обслуживания сплит системы ALFACOOL Apus APS-07CH составляет 3 990 руб.</p>
+            <p>При подписании договора на сервисное обслуживание в момент покупки кондиционера предоставляется скидка 15% (уточняйте). В момент заключения договора составляется график проведения работ на весь гарантийный срок, осуществляется 30% предоплата (уточняйте).</p>
+            <p>Оставшаяся сумма разбивается на 2 года. Соответственно, после проведения ежегодных сервисных работ заказчик оплачивает уточняйте.</p>
           </div>
 
           <div class="product-overview__text" data-product-tab="5" hidden>

@@ -4,20 +4,28 @@ const productPageHref = '/src/pages/product.html';
 
 function setFavoriteState(icon, isActive) {
   icon.dataset.favoriteActive = String(isActive);
-  icon.src = isActive ? activeFavoriteIcon : inactiveFavoriteIcon;
+  const image = icon instanceof HTMLImageElement ? icon : icon.querySelector('img');
+
+  if (image) {
+    image.src = isActive ? activeFavoriteIcon : inactiveFavoriteIcon;
+  }
+
   icon.setAttribute('aria-pressed', String(isActive));
   icon.classList.toggle('is-favorite', isActive);
 }
 
 document.querySelectorAll('.product-card__icons, .product-summary__icons').forEach((icons) => {
-  const favoriteIcon = icons.querySelector('img:first-child');
+  const favoriteIcon = icons.querySelector('[data-favorite-toggle], .product-card__favorite, .product-summary__favorite, button:first-child, img:first-child');
 
   if (!favoriteIcon) {
     return;
   }
 
-  favoriteIcon.tabIndex = 0;
-  favoriteIcon.setAttribute('role', 'button');
+  if (favoriteIcon instanceof HTMLImageElement) {
+    favoriteIcon.tabIndex = 0;
+    favoriteIcon.setAttribute('role', 'button');
+  }
+
   favoriteIcon.setAttribute('aria-pressed', 'false');
   favoriteIcon.dataset.favoriteActive = 'false';
 
@@ -25,12 +33,14 @@ document.querySelectorAll('.product-card__icons, .product-summary__icons').forEa
     setFavoriteState(favoriteIcon, favoriteIcon.dataset.favoriteActive !== 'true');
   });
 
-  favoriteIcon.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      setFavoriteState(favoriteIcon, favoriteIcon.dataset.favoriteActive !== 'true');
-    }
-  });
+  if (favoriteIcon instanceof HTMLImageElement) {
+    favoriteIcon.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setFavoriteState(favoriteIcon, favoriteIcon.dataset.favoriteActive !== 'true');
+      }
+    });
+  }
 });
 
 document.querySelectorAll('.product-card').forEach((card) => {
@@ -47,7 +57,7 @@ document.querySelectorAll('.product-card').forEach((card) => {
       return;
     }
 
-    if (target.closest('.product-card__buttons a, .product-card__icons img, .product-card__icons [role="button"], .product-card__link')) {
+    if (target.closest('.product-card__buttons a, .product-card__icons img, .product-card__icons button, .product-card__icons [role="button"], .product-card__link, .product-summary__icons img, .product-summary__icons button, .product-summary__icons [role="button"]')) {
       return;
     }
 
